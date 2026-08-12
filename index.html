@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanjay — Video Editor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="#top" class="nav-logo">SANJAY<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Hire Me</a>
+  </nav>
+
+  <header id="top" class="hero">
+    <div class="hero-grid"></div>
+    <p class="hero-kicker">Video Editor &amp; Sound Designer</p>
+    <h1 class="hero-title">
+      I cut, color &amp; sound
+      <span class="gradient-text">stories that stick.</span>
+    </h1>
+    <p class="hero-sub">
+      From raw footage to a finished film — 2+ years crafting edits for creators,
+      brands and documentaries that people actually watch to the end.
+    </p>
+    <div class="hero-actions">
+      <a href="#work" class="btn btn-primary">Watch My Work</a>
+      <a href="#contact" class="btn btn-ghost">Start a Project</a>
+    </div>
+    <div class="hero-meta">
+      <div><strong>250+</strong><span>projects cut</span></div>
+      <div><strong>5M</strong><span>views generated</span></div>
+      <div><strong>25+</strong><span>happy clients</span></div>
+    </div>
+  </header>
+
+  <section id="work" class="section">
+    <div class="section-head">
+      <p class="kicker">SELECTED WORK</p>
+      <h2>Videos that earned.</h2>
+    </div>
+    <div class="work-grid" id="work-grid">
+      <!-- injected by JS -->
+    </div>
+    <div class="view-all-wrap">
+      <a href="https://drive.google.com/drive/folders/1h53_zETkHbkise3FxatXO8dVMNMuFn6Q" id="drive-link" target="_blank" rel="noopener" class="btn btn-ghost">View All Works &#8599;</a>
+    </div>
+  </section>
+
+  <section id="services" class="section">
+    <div class="section-head">
+      <p class="kicker">SERVICES</p>
+      <h2>Everything post-production.</h2>
+    </div>
+    <div class="services-grid">
+      <article class="service-card">
+        <span class="service-num">01</span>
+        <h3>Editing</h3>
+        <p>Narrative, pacing and structure that keep viewers glued — from 15s verticals to 60-minute features.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-num">02</span>
+        <h3>Color Grading</h3>
+        <p>Cinematic looks, skin-tone accuracy and consistent grade across every shot in your project.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-num">03</span>
+        <h3>Sound Design</h3>
+        <p>Clean dialogue, immersive ambience and a mix that hits hard — on phones and in theaters.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="section-head">
+      <p class="kicker">ABOUT</p>
+      <h2>The human behind the timeline.</h2>
+    </div>
+    <div class="about-body">
+      <div class="about-text">
+        <p>
+          I'm Sanjay, a video editor based in the edit bay (wherever the coffee and
+          deadlines are). I spent the last 4 years inside DaVinci Resolve,
+          turning chaotic footage into films with intent.
+        </p>
+        <p>
+          My approach: find the story first, then let every cut, grade and
+          sound cue serve it. No filler, no fluff — just edits people feel.
+        </p>
+        <div class="tool-chips">
+          <span>DaVinci Resolve</span>
+        </div>
+      </div>
+      <div class="about-stats">
+        <div class="stat"><strong>34</strong><span>cuts per minute avg.</span></div>
+        <div class="stat"><strong>24<br/>hrs</strong><span>avg. turn-around</span></div>
+        <div class="stat"><strong>1</strong><span>source of truth: the story</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <div class="section-head">
+      <p class="kicker">CONTACT</p>
+      <h2>Got footage? Let's make it a film.</h2>
+    </div>
+    <form class="contact-form" id="contact-form">
+      <input type="text" name="name" placeholder="Your name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="text" name="subject" placeholder="Project type (YouTube, brand, wedding...)" />
+      <textarea name="message" rows="5" placeholder="Tell me about the project, deadline and budget." required></textarea>
+      <button type="submit" class="btn btn-primary">Send Brief</button>
+    </form>
+    <p class="form-note">Prefer email? <a href="mailto:hello@sanjaycuts.com">hello@sanjaycuts.com</a></p>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Sanjay — Cut with intent, grade with taste.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
