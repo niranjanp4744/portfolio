@@ -114,12 +114,26 @@ document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
 document.getElementById('contact-form').addEventListener('submit', (e) => {
   e.preventDefault();
-  const btn = e.target.querySelector('button');
-  btn.textContent = 'Brief sent — I\'ll reply within 24h';
-  btn.style.background = '#2e7d46';
-  e.target.reset();
-  setTimeout(() => {
-    btn.textContent = 'Send Brief';
-    btn.style.background = '';
-  }, 4000);
+  const form = e.target;
+  const btn = form.querySelector('button');
+  const formData = Object.fromEntries(new FormData(form).entries());
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  emailjs.send('service_ujgrlvi', 'template_1o9mngd', formData, 'bJ7N_1Uo4PEf8iN5v')
+    .then(() => {
+      btn.textContent = 'Brief sent — I\'ll reply within 24h';
+      btn.style.background = '#2e7d46';
+      form.reset();
+    })
+    .catch(() => {
+      btn.textContent = 'Failed — try again or email me directly';
+      btn.style.background = '#8a2f2f';
+    })
+    .finally(() => {
+      btn.disabled = false;
+      setTimeout(() => {
+        btn.textContent = 'Send Brief';
+        btn.style.background = '';
+      }, 4000);
+    });
 });
